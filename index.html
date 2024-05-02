@@ -11,11 +11,14 @@
     <!-- font sacramento -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Work+Sans:wght@100;300;400;600;700&display=swap" rel="stylesheet">
 
     <!-- simplyCountdown -->
-    <link rel="stylesheet" href="countdown/"/>
+    <link rel="stylesheet" href="countdown/simplyCountdown.theme.default.css"/>
     <script src="countdown/simplyCountdown.min.js"></script>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   </head>
 
   <body>
@@ -64,7 +67,105 @@
             <p>Oleh karena itu, dengan segala hormat, kami bermaksud untuk mengundang Bapak/Ibu, Saudara/i, untuk hadir pada acara pernikahan kami.</p>
           </div>
         </div>
+
+        <div class="row couple">
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-8 text-end">
+                <h3>Arul Rachman</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate consequatur molestiae qui obcaecati odio, consectetur 
+                  culpa totam omnis soluta delectus in laboriosam perferendis, adipisci, maiores natus. Optio a expedita nulla.</p>
+                  <p>Putra dari Bpk. Loren <br> dan <br> Ibu Ipsum</p>
+              </div>
+              <div class="col-4">
+                <img src="img/arul1.png" alt="Arul Rachman" class="img-responsive rounded-circle">
+              </div>
+            </div>
+          </div>
+
+          <span class="heart"><i class="bi bi-heart-fill"></i></span>
+
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-4">
+                <img src="img/melisah1.png" alt="Melisah" class="img-responsive rounded-circle">
+              </div>
+              <div class="col-8">
+                <h3>Melisah</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate consequatur molestiae qui obcaecati odio, consectetur 
+                  culpa totam omnis soluta delectus in laboriosam perferendis, adipisci, maiores natus. Optio a expedita nulla.</p>
+                  <p>Putra dari Bpk. Loren <br> dan <br> Ibu Ipsum</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
+
+    <section id="info" class="info">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-10 text-center">
+            <h2>Informasi Acara</h2>
+            <p class="alamat">Alamat: Jl. Ki Sulaiman, Desa Megu Cilik <br>Kec. Weru, Kabupaten Cirebon, Jawa Barat 45154</p>
+            <a href="https://maps.app.goo.gl/Uec4fhTrS6Q8QCtP7" target="_blank" class="btn btn-light btn-sm my-3">Klik untuk membuka peta</a>
+            <p class="description">Diharapkan untuk tidak salah alamat dan tanggal. Apabila tiba di tujuan namun tidak ada tanda-tanda sedang dilangsungkannya pernikahan,
+              boleh jadi Anda salah jadwal atau salah tempat.
+            </p>
+          </div>
+        </div>
+
+        <div class="row justify-content-center mt-4">
+          <div class="col-md-5 col-10">
+            <div class="card text-center text-bg-light mb-5">
+              <div class="card-header">
+                Akad Nikah
+              </div>
+              <div class="card-body">
+                <div class="row justify-content-center">
+                  <div class="col-md-6">
+                    <i class="bi bi-clock d-block"></i>
+                    <span>08.00 - 10.00</span>
+                  </div>
+                  <div class="col-md-6">
+                    <i class="bi bi-calendar3 d-block"></i>
+                    <span>Minggu, 28 April 2024</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                Saat acara akad diharapkan untuk kondusif menjaga kekhidmatan dan kekhusyuan seluruh prosesi.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5 col-10">
+            <div class="card text-center text-bg-light">
+              <div class="card-header">
+                Resepsi
+              </div>
+              <div class="card-body">
+                <div class="row justify-content-center">
+                  <div class="col-md-6">
+                    <i class="bi bi-clock d-block"></i>
+                    <span>11.00 - Selesai</span>
+                  </div>
+                  <div class="col-md-6">
+                    <i class="bi bi-calendar3 d-block"></i>
+                    <span>Minggu, 28 April 2024</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                Saat acara akad diharapkan untuk kondusif menjaga kekhidmatan dan kekhusyuan seluruh prosesi.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="story" class="story">
+      
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
@@ -80,6 +181,19 @@
                 seconds: { singular: 'detik', plural: 'detik' }
             },
         });
+    </script>
+
+    <script>
+      const stickyTop = document.querySelector('.sticky-top');
+      const offcanvas = document.querySelector('.offcanvas');
+
+      offcanvas.addEventListener('show.bs.offcanvas', function() {
+        stickyTop.style.overflow = 'visible';
+      });
+
+      offcanvas.addEventListener('hidden.bs.offcanvas', function() {
+        stickyTop.style.overflow = 'hidden';
+      });
     </script>
   </body>
 
